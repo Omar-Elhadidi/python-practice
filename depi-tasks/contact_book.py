@@ -1,3 +1,17 @@
+"""
+Mini Project: Simple Contact Book
+Goal: Build a simple contact book using a dictionary.
+
+Users can:
+- Add a new contact (name + number)
+- Search for a contact by name
+- Delete a contact
+- Show all contacts
+- Exit the program
+
+Uses: Dictionary (key-value), Loops and input, Conditionals and menu logic, Functions.
+"""
+
 contacts = {
     "Omar Tamer" : "01061984638",
     "Ahmed Azab ": "0123456789",
