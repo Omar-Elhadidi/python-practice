@@ -1,66 +1,52 @@
 """
-=============================================================================
-Mini Project: Simple Contact Book CLI
-=============================================================================
-
-Problem Statement / Prompt:
-Build a menu-driven, terminal-based contact book application using Python dictionaries.
+Problem: Terminal Contact Management System (CRUD)
 
 Requirements:
-1. Users must be able to:
-   - Add a new contact (Name + Phone Number)
-   - Search for a contact by name
-   - Delete an existing contact by name
-   - Show all saved contacts
-   - Exit the application gracefully
-2. Input Validation:
-   - Names must contain only alphabetic characters and spaces (e.g. "Omar Tamer").
-   - Phone numbers must contain only digits.
-3. Architecture:
-   - Use dictionaries for O(1) key-value lookups.
-   - Use functions for each core action (`add_contact`, `search_contact`, etc.).
-   - Normalize names with `.title()` to prevent casing duplication.
+1. Store contacts in memory using a dictionary with names as keys and phone numbers as values.
+2. Provide an interactive command-line interface supporting four primary operations:
+   - Add a new contact (with automatic duplicate updating).
+   - Search for a contact by name and display their registered number.
+   - Delete an existing contact with existence verification.
+   - Show all saved contacts formatted in a structured list.
+3. Validate user inputs: Ensure contact names contain only alphabetic characters (spaces allowed) and phone numbers contain only numeric digits.
+4. Normalize contact names to title case for consistent search and display formatting.
 
-Key Concepts:
-- Dictionary CRUD operations (`contacts[key] = val`, `.get()`, `.pop()`, `.items()`)
-- `while True` main event loop
-- Helper validation loops with `.isalpha()` and `.isdigit()`
-=============================================================================
+Concepts: Python dictionaries, infinite while loops, input validation (`isalpha()`, `isdigit()`), custom functions, string formatting.
 """
 
 contacts = {
-    "Omar Tamer" : "01061984638",
-    "Ahmed Azab ": "0123456789",
+    "Omar Tamer": "01061984638",
+    "Ahmed Azab": "0123456789",
     "Mohammed": "097654321",
 }
 
 def add_contact(name, num):
-  contacts.update({name.title() : num})
-  print(f"{name} added to contacts ✅")
+    contacts.update({name.title(): num})
+    print(f"{name} added to contacts ✅")
 
 def search_contact(name):
- number = contacts.get(name.title())
- if number == None:
-   print(f"{name} isn't in contacts ❌")
- else:
-   print(f"Name: {name:10}  Number: {number}")
+    number = contacts.get(name.title())
+    if number is None:
+        print(f"{name} isn't in contacts ❌")
+    else:
+        print(f"Name: {name:10}  Number: {number}")
 
 def delete_contact(name):
-  name = name.title()
-  if name in contacts:
-    contacts.pop(name)
-    print(f"Contact {name} deleted ✅")
-  else:
-    print(f"{name} isn't in contacts")
+    name = name.title()
+    if name in contacts:
+        contacts.pop(name)
+        print(f"Contact {name} deleted ✅")
+    else:
+        print(f"{name} isn't in contacts")
 
 def show_contacts():
-  print("-----------Contacts----------")
-  for contact, number in contacts.items():
-    print(f"Name: {contact.title():10}  Number: {number}")
+    print("-----------Contacts----------")
+    for contact, number in contacts.items():
+        print(f"Name: {contact.title():10}  Number: {number}")
 
 
 while True:
-  action = input( """
+    action = input("""
 What would like to do ?
 Add a new contact --> add
 Search for contact ---> search
@@ -70,44 +56,40 @@ To quit --> q
 
 """).strip().lower()
 
-  if action == "add":
+    if action == "add":
+        name = input("Enter new contact's name: ")
+        while not name.replace(" ", "").isalpha():
+            print("Enter a valid name")
+            name = input("Enter new contact's name: ")
 
-    name = input("Enter new contact's name: ")
-    while not name.replace(" ", "").isalpha():
-      print("Enter a valid name")
-      name = input("Enter new contact's name: ")
+        num = input("Enter new contact's number: ")
+        while not num.isdigit():
+            print("Enter a valid number")
+            num = input("Enter new contact's number: ")
+        print()
+        add_contact(name, num)
 
-    num = input("Enter new contact's number: ")
-    while not num.isdigit():
-       print("Enter a valid number")
-       num = input("Enter new contact's number: ")
-    print()
-    add_contact(name, num)
+    elif action == "search":
+        name = input("Enter Contact's name: ")
+        while not name.replace(" ", "").isalpha():
+            print("Enter a valid name")
+            name = input("Enter Contact's name: ")
+        print()
+        search_contact(name)
 
+    elif action == "delete":
+        name = input("Enter Contact's name to delete: ")
+        while not name.replace(" ", "").isalpha():
+            print("Enter a valid name")
+            name = input("Enter Contact's name to delete: ")
+        print()
+        delete_contact(name)
 
-  elif action == "search":
-    name = input("Enter Contact's name: ")
-    while not name.replace(" ", "").isalpha():
-      print("Enter a valid name")
-      name = input("Enter Contact's name: ")
-    print()
-    search_contact(name)
+    elif action == "show":
+        show_contacts()
 
+    elif action == "q":
+        break
 
-  elif action == "delete":
-    name = input("Enter Contact's name to delete: ")
-    while not name.replace(" ", "").isalpha():
-      print("Enter a valid name")
-      name = input("Enter Contact's name to delete: ")
-    print()
-    delete_contact(name)
-
-
-  elif action == "show":
-    show_contacts()
-
-  elif action =="q":
-    break
-
-  else:
-    print("Enter a valid action")
+    else:
+        print("Enter a valid action")

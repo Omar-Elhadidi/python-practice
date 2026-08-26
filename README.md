@@ -1,32 +1,29 @@
 # Python Practice 🐍
 
-A centralized repository for Python projects, automation scripts, and problem-solving.
+A structured repository tracking Python fundamentals, algorithmic exercises, and data-focused mini-projects developed during the DEPI scholarship.
 
-## 📂 Structure
+## 📂 Repository Structure
 
-| Directory | Description |
+| Directory | Focus |
 |---|---|
-| `/depi-tasks` | Mini-projects and assignments built during the DEPI scholarship program. |
-| `/hackerrank` | Solutions to Python algorithmic challenges (Future). |
+| `/depi-tasks` | Progressive assignments and CLI mini-projects covering core Python syntax, data structures, and OOP. |
+| `/hackerrank` | Algorithmic problem-solving and interview preparation (Upcoming). |
 
-## 🚀 DEPI Projects & Assignments
+---
 
-### 1. Conditional Logic & Grading (`/depi-tasks/01_conditional_logic.py`)
-- **Focus:** `if / elif / else` flow, numerical range validation, and nested conditions.
-- **Problem:** Takes a score (1–100), validates bounds, assigns letter grades (A–D), and handles special conditions.
+## 🚀 Projects & Assignments
 
-### 2. String Operations (`/depi-tasks/02_string_operations.py`)
-- **Focus:** String slicing, searching, iteration, and f-strings.
-- **Problem:** Email username extraction, counting vowels with loops, and input sanitization.
+### 1. String Operations (`/depi-tasks/01_string_operations.py`)
+- **Focus:** String slicing, substring indexing (`.find()`), vowel frequency counting, and f-string interpolation.
 
-### 3. Text Cleaner & Normalizer (`/depi-tasks/03_text_cleaner.py`)
-- **Focus:** String manipulation and data cleaning.
-- **Problem:** Strips irregular whitespace, replaces slang words (`u` -> `you`, `r` -> `are`), and capitalizes sentences.
+### 2. Text Normalization Cleaner (`/depi-tasks/02_text_cleaner.py`)
+- **Focus:** Method chaining, multi-space normalization, slang expansion, and sentence formatting.
 
-### 4. Terminal Contact Book (`/depi-tasks/04_contact_book_cli.py`)
-- **Focus:** Dictionaries, CRUD operations, input loops, and data normalization.
-- **Problem:** Full terminal menu allowing users to add, search, delete, and list phone contacts with input validation.
+### 3. Student Grade Classifier (`/depi-tasks/03_grade_calculator.py`)
+- **Focus:** Defensive numeric range validation, conditional logic tiers (`if/elif/else`), and nested decision trees.
 
-### 5. ATM / Banking CLI (`/depi-tasks/05_atm_bank_app.py`)
-- **Focus:** Pure functions, state management, currency formatting, and modular entry points (`if __name__ == '__main__'`).
-- **Problem:** A multi-step banking terminal managing balance inquiries, validated deposits, and overdraft-protected withdrawals.
+### 4. Terminal Contact Book CLI (`/depi-tasks/04_contact_book_cli.py`)
+- **Focus:** Full CRUD memory management using dictionaries, defensive input validation (name alpha checks & digit verification), and standardized string casing.
+
+### 5. ATM Banking System CLI (`/depi-tasks/05_atm_banking_cli.py`)
+- **Focus:** Modular stateful operations, pure function return values, currency decimal formatting (`{balance:,.2f}$`), overdraft defense, and execution scope protection (`if __name__ == '__main__'`).

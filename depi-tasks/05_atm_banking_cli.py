@@ -1,34 +1,14 @@
 """
-=============================================================================
-Mini Project: ATM / Banking CLI Application
-=============================================================================
-
-Problem Statement / Requirements:
-Build a realistic terminal-based ATM machine / banking application that allows 
-a user to manage their account balance securely.
+Problem: ATM / Bank Account Simulation CLI
 
 Requirements:
-1. Operations:
-   - Option 1: Show current account balance formatted nicely with decimals and currency.
-   - Option 2: Deposit an amount into the account.
-   - Option 3: Withdraw an amount from the account.
-   - Option 4: Exit the program cleanly.
-2. Financial & Business Rules:
-   - Starting balance is $0.00.
-   - Deposited amounts must be positive numbers.
-   - Overdraft Protection: Prevent withdrawals that exceed the current balance.
-   - Currency display must show comma separators and 2 decimal places (e.g. $1,250.50).
-3. Code Architecture:
-   - Use dedicated pure functions for `deposit()`, `withdraw()`, and `show_balance()`.
-   - Separate business logic from user input/output.
-   - Encapsulate execution under standard `if __name__ == '__main__':` block.
+1. Maintain and display a stateful account balance formatted as standard currency with two decimal places (e.g., $1,250.00).
+2. Implement a deposit function that takes a validated positive numeric amount and returns the updated account balance.
+3. Implement a withdrawal function with overdraft protection that rejects transactions exceeding available funds.
+4. Validate all numerical user inputs defensively against negative numbers and non-numeric values.
+5. Structure the application using modular pure functions and an `if __name__ == '__main__':` entry point.
 
-Key Concepts:
-- Pure functions and return value state management
-- Numerical validation and loop guards
-- Advanced f-string formatting (`{balance:,.2f}$`)
-- Clean terminal menu flow
-=============================================================================
+Concepts: Modular function architecture, state tracking, currency f-string formatting (`{balance:,.2f}$`), input validation, entry-point modularity.
 """
 
 def show_balance(balance):
