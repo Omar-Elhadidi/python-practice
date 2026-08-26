@@ -1,15 +1,31 @@
 """
-Mini Project: Simple Contact Book
-Goal: Build a simple contact book using a dictionary.
+=============================================================================
+Mini Project: Simple Contact Book CLI
+=============================================================================
 
-Users can:
-- Add a new contact (name + number)
-- Search for a contact by name
-- Delete a contact
-- Show all contacts
-- Exit the program
+Problem Statement / Prompt:
+Build a menu-driven, terminal-based contact book application using Python dictionaries.
 
-Uses: Dictionary (key-value), Loops and input, Conditionals and menu logic, Functions.
+Requirements:
+1. Users must be able to:
+   - Add a new contact (Name + Phone Number)
+   - Search for a contact by name
+   - Delete an existing contact by name
+   - Show all saved contacts
+   - Exit the application gracefully
+2. Input Validation:
+   - Names must contain only alphabetic characters and spaces (e.g. "Omar Tamer").
+   - Phone numbers must contain only digits.
+3. Architecture:
+   - Use dictionaries for O(1) key-value lookups.
+   - Use functions for each core action (`add_contact`, `search_contact`, etc.).
+   - Normalize names with `.title()` to prevent casing duplication.
+
+Key Concepts:
+- Dictionary CRUD operations (`contacts[key] = val`, `.get()`, `.pop()`, `.items()`)
+- `while True` main event loop
+- Helper validation loops with `.isalpha()` and `.isdigit()`
+=============================================================================
 """
 
 contacts = {

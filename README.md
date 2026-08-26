@@ -9,23 +9,24 @@ A centralized repository for Python projects, automation scripts, and problem-so
 | `/depi-tasks` | Mini-projects and assignments built during the DEPI scholarship program. |
 | `/hackerrank` | Solutions to Python algorithmic challenges (Future). |
 
-## 🚀 Projects & Scripts
+## 🚀 DEPI Projects & Assignments
 
-### 1. String Operations (`/depi-tasks/01_string_operations.py`)
-Extracts usernames from emails and counts vowels using string iteration and slicing.
+### 1. Conditional Logic & Grading (`/depi-tasks/01_conditional_logic.py`)
+- **Focus:** `if / elif / else` flow, numerical range validation, and nested conditions.
+- **Problem:** Takes a score (1–100), validates bounds, assigns letter grades (A–D), and handles special conditions.
 
-### 2. Text Cleaner (`/depi-tasks/02_text_cleaner.py`)
-A string formatting script that sanitizes messy input, removes extra spaces, and replaces shorthand words.
+### 2. String Operations (`/depi-tasks/02_string_operations.py`)
+- **Focus:** String slicing, searching, iteration, and f-strings.
+- **Problem:** Email username extraction, counting vowels with loops, and input sanitization.
 
-### 3. Conditional Logic (`/depi-tasks/03_conditional_logic.py`)
-A grading logic script that demonstrates numerical range validation and nested `if/elif/else` blocks.
+### 3. Text Cleaner & Normalizer (`/depi-tasks/03_text_cleaner.py`)
+- **Focus:** String manipulation and data cleaning.
+- **Problem:** Strips irregular whitespace, replaces slang words (`u` -> `you`, `r` -> `are`), and capitalizes sentences.
 
 ### 4. Terminal Contact Book (`/depi-tasks/04_contact_book_cli.py`)
-A fully functional CRUD (Create, Read, Update, Delete) contact management system built entirely in the terminal.
-- **Features:** Add, search, delete, and list contacts.
-- **Highlights:** Secure input validation (handling spaces and alphabetic checks) and clean menu-driven architecture.
+- **Focus:** Dictionaries, CRUD operations, input loops, and data normalization.
+- **Problem:** Full terminal menu allowing users to add, search, delete, and list phone contacts with input validation.
 
-### 5. ATM / Bank Account CLI (`/depi-tasks/05_atm_bank_app.py`)
-A banking terminal application managing stateful account balances, deposits, and withdrawals.
-- **Features:** Balance inquiries with decimal formatting, deposits, and overdraft protection.
-- **Highlights:** Pure functions with explicit return values, entry-point modularity (`if __name__ == '__main__'`), and number sanitization.
+### 5. ATM / Banking CLI (`/depi-tasks/05_atm_bank_app.py`)
+- **Focus:** Pure functions, state management, currency formatting, and modular entry points (`if __name__ == '__main__'`).
+- **Problem:** A multi-step banking terminal managing balance inquiries, validated deposits, and overdraft-protected withdrawals.
