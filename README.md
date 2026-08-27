@@ -29,4 +29,4 @@ A structured repository tracking Python fundamentals, algorithmic exercises, and
 - **Focus:** Modular stateful operations, pure function return values, currency decimal formatting (`{balance:,.2f}$`), overdraft defense, and execution scope protection (`if __name__ == '__main__'`).
 
 ### 6. Spin the Landmarks Slot Machine (`/depi-tasks/06_spin_the_landmarks.py`)
-- **Focus:** Randomized selection (`random.choice`), list comprehensions, dictionary metadata mapping, chained equality win evaluations, and loop termination state.
+- **Focus:** Random sequence sampling (`random.choice`), chained equality comparisons (`a == b == c`), dictionary lookups for metadata mapping, and loop attempt counters.

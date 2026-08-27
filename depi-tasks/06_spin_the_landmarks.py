@@ -1,32 +1,35 @@
 """
-Problem: Spin the Landmarks (Arab Cultural Slot Machine)
+Problem: Slot-Machine Game - Spin the Landmarks (لعبة سحب لأشهر معالم الوطن العربي)
 
 Requirements:
-1. Define a collection of landmark emoji symbols mapped to their full cultural names in a dictionary.
-2. Implement a `spin()` function utilizing list comprehension and `random.choice()` to pick 3 random symbols.
-3. Format output with ` | ` separators via `show_results()`.
-4. Evaluate win conditions using chained equality comparisons (`check_win()`).
-5. Run a 3-attempt game loop terminating immediately upon winning or exhausting attempts.
+1. Define a pool of landmark symbols (emojis) and a lookup dictionary mapping each symbol to its cultural name.
+2. Implement a `spin()` function that randomly selects 3 symbols using the `random` module.
+3. Implement a win-condition check (`check_result()`) verifying if all 3 spun symbols match (`symbol1 == symbol2 == symbol3`).
+4. Manage a game loop giving the player exactly 3 attempts to win:
+   - Provide clear countdown messaging with proper singular/plural grammar ("1 spin left" vs "X spins left").
+   - If won: Announce the victory, display the landmark name from the dictionary, and terminate the game.
+   - If lost: Prompt the user to retry while spins remain, or display a game-over message when out of spins.
 
-Concepts: `random.choice()`, list comprehensions, dictionary lookups, chained equality, modular functions, game loops.
+Concepts: `random.choice()`, chained comparisons (`a == b == c`), dictionary key lookup, while loop state tracking, entry-point modularity (`if __name__ == '__main__'`).
 """
 
 import random
 
 
-def spin(symbols):
-    return [random.choice(symbols) for _ in range(3)]
+def spin(landmarks):
+    result = []
+    for _ in range(3):
+        result.append(random.choice(landmarks))
+    return result
 
 
-def show_results(result):
-    print(" | ".join(result))
-
-
-def check_win(result):
+def check_result(result):
     return result[0] == result[1] == result[2]
 
 
 def main():
+    landmarks = ["🕋", "🕌", "🌊", "🏺", "🏰", "🏛️"]
+
     names = {
         "🕋": "Kaaba - Mecca",
         "🕌": "Al-Aqsa Mosque",
@@ -35,29 +38,34 @@ def main():
         "🏰": "Citadel of Salah El-Din",
         "🏛️": "Egyptian Museum - Cairo",
     }
-    symbols = list(names.keys())
 
-    print("You have 3 attempts to play!")
-    counter = 0
+    tries = 3
 
-    while True:
-        input("Press Enter to spin the Arabic landmark machine... ")
+    while tries != 0:
+        if tries == 1:
+            print(f"{tries} spin left")
+        else:
+            print(f"{tries} spins left")
 
-        result = spin(symbols)
-        show_results(result)
+        input("Press enter to spin.. ")
+        print()
 
-        if check_win(result):
-            print(f"🎉 You discovered 3 of {result[0]} ({names[result[0]]})!")
-            print("Cultural tour unlocked! Mabrouk!")
+        tries = tries - 1
+        result = spin(landmarks)
+
+        print(" | ".join(result))
+        print()
+
+        if check_result(result):
+            print("You Won! 🎉")
+            print(f"You got a free trip to {result[0]} ({names[result[0]]})!")
             break
         else:
-            print("Try again to match the landmark 😄\n")
-
-        counter += 1
-        if counter == 3:
-            print("You have used all 3 attempts.")
-            print("Have a nice day!")
-            break
+            if tries >= 1:
+                print("Try again 😄\n")
+            else:
+                print("No spins left.")
+                print("Thanks for playing! Have a nice day!\n")
 
 
 if __name__ == "__main__":
