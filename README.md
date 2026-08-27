@@ -1,35 +1,13 @@
 # Python Practice 🐍
 
-A structured repository tracking Python fundamentals, algorithmic exercises, and data-focused mini-projects developed during the DEPI scholarship.
+Assignments, exercises, and mini-projects from the DEPI scholarship.
 
-## 📂 Repository Structure
+## 📂 Tasks & Projects
 
-| Directory | Focus |
-|---|---|
-| `/depi-tasks` | Progressive assignments and CLI mini-projects covering core Python syntax, data structures, and OOP. |
-| `/hackerrank` | Algorithmic problem-solving and interview preparation (Upcoming). |
-
----
-
-## 🚀 Projects & Assignments
-
-### 1. String Operations (`/depi-tasks/01_string_operations.py`)
-- **Focus:** String slicing, substring indexing (`.find()`), vowel frequency counting, and f-string interpolation.
-
-### 2. Text Normalization Cleaner (`/depi-tasks/02_text_cleaner.py`)
-- **Focus:** Method chaining, multi-space normalization, slang expansion, and sentence formatting.
-
-### 3. Student Grade Classifier (`/depi-tasks/03_grade_calculator.py`)
-- **Focus:** Defensive numeric range validation, conditional logic tiers (`if/elif/else`), and nested decision trees.
-
-### 4. Terminal Contact Book CLI (`/depi-tasks/04_contact_book_cli.py`)
-- **Focus:** Full CRUD memory management using dictionaries, defensive input validation (name alpha checks & digit verification), and standardized string casing.
-
-### 5. ATM Banking System CLI (`/depi-tasks/05_atm_banking_cli.py`)
-- **Focus:** Modular stateful operations, pure function return values, currency decimal formatting (`{balance:,.2f}$`), overdraft defense, and execution scope protection (`if __name__ == '__main__'`).
-
-### 6. Spin the Landmarks Slot Machine (`/depi-tasks/06_spin_the_landmarks.py`)
-- **Focus:** Random sequence sampling (`random.choice`), chained equality comparisons (`a == b == c`), dictionary lookups for metadata mapping, and loop attempt counters.
-
-### 7. Substitution Cipher Engine (`/depi-tasks/07_substitution_cipher.py`)
-- **Focus:** Character vocabulary generation via `string` module, in-place random permutations (`random.shuffle`), and bidirectional index substitution mapping for data encryption and decryption.
+- **`01_string_operations.py`** - String indexing, slicing, counting vowels, and f-strings.
+- **`02_text_cleaner.py`** - Cleaning up messy text, removing extra spaces, and replacing shorthand words.
+- **`03_grade_calculator.py`** - Grade tier calculator with 1-100 score validation.
+- **`04_contact_book_cli.py`** - Terminal contact book using a dictionary with add, search, delete, and show features.
+- **`05_atm_banking_cli.py`** - Simple ATM program with balance checking, deposit, and withdraw functions.
+- **`06_spin_the_landmarks.py`** - Slot-machine style game that randomly matches Arabic landmarks.
+- **`07_substitution_cipher.py`** - Text encryption and decryption using a shuffled character list.

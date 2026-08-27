@@ -1,22 +1,18 @@
 """
-Problem: Terminal Contact Management System (CRUD)
+Mini Project: Simple Contact Book
+Goal: Build a simple contact book using a dictionary.
 
-Requirements:
-1. Store contacts in memory using a dictionary with names as keys and phone numbers as values.
-2. Provide an interactive command-line interface supporting four primary operations:
-   - Add a new contact (with automatic duplicate updating).
-   - Search for a contact by name and display their registered number.
-   - Delete an existing contact with existence verification.
-   - Show all saved contacts formatted in a structured list.
-3. Validate user inputs: Ensure contact names contain only alphabetic characters (spaces allowed) and phone numbers contain only numeric digits.
-4. Normalize contact names to title case for consistent search and display formatting.
-
-Concepts: Python dictionaries, infinite while loops, input validation (`isalpha()`, `isdigit()`), custom functions, string formatting.
+Features:
+- Add a new contact (name + number)
+- Search for a contact by name
+- Delete a contact
+- Show all contacts
+- Exit the program
 """
 
 contacts = {
     "Omar Tamer": "01061984638",
-    "Ahmed Azab": "0123456789",
+    "Ahmed Azab ": "0123456789",
     "Mohammed": "097654321",
 }
 
@@ -26,7 +22,7 @@ def add_contact(name, num):
 
 def search_contact(name):
     number = contacts.get(name.title())
-    if number is None:
+    if number == None:
         print(f"{name} isn't in contacts ❌")
     else:
         print(f"Name: {name:10}  Number: {number}")

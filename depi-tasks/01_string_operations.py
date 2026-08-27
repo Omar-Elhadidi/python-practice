@@ -1,21 +1,12 @@
-"""
-Problem: Basic String Operations & Manipulations
-
-Requirements:
-1. Extract the username prefix from an email address using string slicing and `.find()`.
-2. Count the total number of vowels (a, e, i, o, u) in a full name using iteration and membership checks.
-3. Sanitize user input by removing outer whitespace and converting characters to lowercase.
-4. Output structured user profile information using f-strings.
-
-Concepts: String slicing, membership operators (`in`), for loops, string sanitization (`strip()`, `lower()`), f-strings.
-"""
+# Task 1: String Operations
+# Practice string indexing, slicing, counting vowels, and f-strings.
 
 # 1. Extract username from email
 email = "omar@gmail.com"
 username = email[:email.find("@")]
 print(username)
 
-# 2. Count vowels in a string
+# 2. Count vowels in a name
 name = "Omar Elhadidi"
 vowels = ["a", "e", "i", "o", "u"]
 count = 0

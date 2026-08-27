@@ -1,22 +1,13 @@
-"""
-Problem: Text Normalization & Slang Cleaner
-
-Requirements:
-1. Strip leading and trailing whitespace from an uncleaned input string.
-2. Collapse multiple internal spaces between words into a single space.
-3. Replace informal shorthand slang words ('u' -> 'you', 'r' -> 'are').
-4. Capitalize the first letter of the resulting cleaned sentence.
-
-Concepts: String methods chaining (`strip()`, `split()`, `join()`, `replace()`, `capitalize()`).
-"""
+# Mini Project: Text Cleaner
+# Clean a messy string: remove extra spaces, replace shorthand words (u -> you, r -> are), and capitalize.
 
 text = "  hey   u  r awesome! lol  "
 
-# Strip outer spaces and normalize internal whitespace
+# Strip outer spaces and remove extra spaces between words
 text = text.strip().split()
 text = " ".join(text)
 
-# Replace shorthand slang and capitalize
+# Replace shorthand words and capitalize
 text = text.replace("u", "you").replace("r", "are")
 text = text.capitalize()
 

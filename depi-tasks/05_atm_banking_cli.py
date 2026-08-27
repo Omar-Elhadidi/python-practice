@@ -1,14 +1,6 @@
 """
-Problem: ATM / Bank Account Simulation CLI
-
-Requirements:
-1. Maintain and display a stateful account balance formatted as currency with two decimal places.
-2. Implement a deposit function that takes a validated positive numeric amount and returns the updated account balance.
-3. Implement a withdrawal function that checks for sufficient funds before updating balance.
-4. Validate user inputs so deposit and withdrawal amounts are positive numbers.
-5. Structure the application using functions and an `if __name__ == '__main__':` entry point.
-
-Concepts: Function return values, state tracking, currency formatting (`{balance:,.2f}$`), input validation, `if __name__ == '__main__'`.
+Mini Project: ATM / Banking Program
+A simple terminal ATM program with balance checking, deposit, and withdraw functions.
 """
 
 def show_balance(balance):
