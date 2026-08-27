@@ -1,5 +1,10 @@
-# Mini Project: Text Cleaner
-# Clean a messy string: remove extra spaces, replace shorthand words (u -> you, r -> are), and capitalize.
+"""
+Mini Project: Text Cleaner
+Take a messy input string and clean it up:
+1. Remove extra leading/trailing whitespace and multiple spaces between words.
+2. Replace shorthand words like 'u' with 'you' and 'r' with 'are'.
+3. Capitalize the first letter of the cleaned sentence.
+"""
 
 text = "  hey   u  r awesome! lol  "
 

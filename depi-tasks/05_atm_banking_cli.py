@@ -1,6 +1,10 @@
 """
 Mini Project: ATM / Banking Program
-A simple terminal ATM program with balance checking, deposit, and withdraw functions.
+Build a simple terminal ATM program with a main menu:
+1. Show Balance - Display current balance formatted with 2 decimal places ($0.00).
+2. Deposit - Add a positive amount to balance.
+3. Withdraw - Subtract amount from balance (check for sufficient funds).
+4. Exit - Quit the program.
 """
 
 def show_balance(balance):

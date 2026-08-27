@@ -1,6 +1,11 @@
 """
-Mini Project: Spin the Landmarks Slot Machine
-A simple game that randomly picks 3 landmarks. The player has 3 tries to match all 3.
+Mini Project: Spin the Landmarks (Slot Machine Game)
+Build a slot-machine style game matching Arabic landmarks:
+1. Define a list of landmark symbols and a dictionary mapping symbols to their names.
+2. Randomly spin 3 landmarks on each turn using random.choice.
+3. Give the player 3 tries to match all 3 landmarks.
+4. If all 3 match, announce the win with the landmark name and stop.
+5. If out of tries, print game over.
 """
 
 import random

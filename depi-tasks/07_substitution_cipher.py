@@ -1,6 +1,10 @@
 """
 Mini Project: Substitution Cipher
-Encrypt a message by swapping characters with a shuffled key list, and decrypt it back.
+Build an encryption and decryption program:
+1. Create a character list containing spaces, letters, digits, and punctuation using the string module.
+2. Create a shuffled copy of the characters to act as the secret key.
+3. Encrypt: Swap each character of the plain text with the character at the same index in the key.
+4. Decrypt: Swap each encrypted character back to its original character from the base list.
 """
 
 import random
