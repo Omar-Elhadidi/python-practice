@@ -27,3 +27,6 @@ A structured repository tracking Python fundamentals, algorithmic exercises, and
 
 ### 5. ATM Banking System CLI (`/depi-tasks/05_atm_banking_cli.py`)
 - **Focus:** Modular stateful operations, pure function return values, currency decimal formatting (`{balance:,.2f}$`), overdraft defense, and execution scope protection (`if __name__ == '__main__'`).
+
+### 6. Spin the Landmarks Slot Machine (`/depi-tasks/06_spin_the_landmarks.py`)
+- **Focus:** Randomized selection (`random.choice`), list comprehensions, dictionary metadata mapping, chained equality win evaluations, and loop termination state.
