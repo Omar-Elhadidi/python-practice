@@ -2,55 +2,45 @@
 Problem: Substitution Cipher (Encryption & Decryption)
 
 Requirements:
-1. Generate a character vocabulary containing whitespace, punctuation, numeric digits, and ASCII letters using the `string` module.
-2. Create an encryption key by creating a shallow copy of the character set and shuffling it with `random.shuffle()`.
-3. Encrypt plain text: Map each input character from its index in the base character list to the corresponding character in the shuffled key list.
-4. Decrypt cipher text: Map each encrypted character from its index in the key list back to the original character in the base character list.
-5. Display side-by-side verification of original, encrypted, and decrypted strings.
+1. Generate a base character list containing whitespace, letters, digits, and punctuation using the `string` module.
+2. Create an encryption key by creating a copy of the characters and shuffling them with `random.shuffle()`.
+3. Encrypt a plain text message by finding each character's index in `chars` and replacing it with the character at the same index in `keys`.
+4. Decrypt the secret message by finding each character's index in `keys` and getting back the original character from `chars`.
+5. Print both the encrypted and decrypted results to verify accuracy.
 
-Concepts: `string` constants, list copying/slicing (`[:]`), in-place shuffling (`random.shuffle()`), index-based character substitution (`.index()`).
+Concepts: `string` constants, list slicing/copying (`[:]`), `random.shuffle()`, index-based mapping (`.index()`).
 """
 
 import random
 import string
 
-# Build character set (including whitespace)
-chars = " " + string.punctuation + string.digits + string.ascii_letters
+chars = " " + string.ascii_letters + string.digits + string.punctuation
 chars = list(chars)
-
-# Create shuffled substitution key
 keys = chars[:]
 random.shuffle(keys)
 
-print(f"Base Chars ({len(chars)}): {''.join(chars[:20])}...")
-print(f"Shuffled Key:       {''.join(keys[:20])}...")
-print("-" * 50)
+print(chars)
+print(keys)
 
-# --- ENCRYPTION ---
+# encrypt
 plain_text = input("Enter text to encrypt: ")
 print()
 
 cipher_text = ""
 for char in plain_text:
-    if char in chars:
-        cipher_text += keys[chars.index(char)]
-    else:
-        cipher_text += char  # Fallback for untracked characters
+    cipher_text = cipher_text + keys[chars.index(char)]
 
-print(f"Plain text    : {plain_text}")
-print(f"Encrypted text: {cipher_text}")
-print("-" * 50)
-
-# --- DECRYPTION ---
-cipher_input = input("Enter encrypted message to decrypt: ")
+print(f"Plain text   : {plain_text}")
+print(f"Enrypted text: {cipher_text}")
 print()
 
-decrypted_text = ""
-for char in cipher_input:
-    if char in keys:
-        decrypted_text += chars[keys.index(char)]
-    else:
-        decrypted_text += char
+# decrypt
+cipher_text = input("Enter encrypted message to decrypt: ")
+print()
 
-print(f"Encrypted text: {cipher_input}")
-print(f"Decrypted text: {decrypted_text}")
+plain_text = ""
+for char in cipher_text:
+    plain_text = plain_text + chars[keys.index(char)]
+
+print(f"Enrypted text: {cipher_text}")
+print(f"Plain text   : {plain_text}")
