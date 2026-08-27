@@ -30,3 +30,6 @@ A structured repository tracking Python fundamentals, algorithmic exercises, and
 
 ### 6. Spin the Landmarks Slot Machine (`/depi-tasks/06_spin_the_landmarks.py`)
 - **Focus:** Random sequence sampling (`random.choice`), chained equality comparisons (`a == b == c`), dictionary lookups for metadata mapping, and loop attempt counters.
+
+### 7. Substitution Cipher Engine (`/depi-tasks/07_substitution_cipher.py`)
+- **Focus:** Character vocabulary generation via `string` module, in-place random permutations (`random.shuffle`), and bidirectional index substitution mapping for data encryption and decryption.
