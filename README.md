@@ -11,3 +11,4 @@ Assignments, exercises, and mini-projects from the DEPI scholarship.
 - **`05_atm_banking_cli.py`** - Simple ATM program with balance checking, deposit, and withdraw functions.
 - **`06_spin_the_landmarks.py`** - Slot-machine style game that randomly matches Arabic landmarks.
 - **`07_substitution_cipher.py`** - Text encryption and decryption using a shuffled character list.
+- **`08_input_validator.py`** - Custom exception class and try/except validation loop for username inputs.
