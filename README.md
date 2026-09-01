@@ -12,3 +12,4 @@ Assignments, exercises, and mini-projects from the DEPI scholarship.
 - **`06_spin_the_landmarks.py`** - Slot-machine style game that randomly matches Arabic landmarks.
 - **`07_substitution_cipher.py`** - Text encryption and decryption using a shuffled character list.
 - **`08_input_validator.py`** - Custom exception class and try/except validation loop for username inputs.
+- **`09_oop_data_pipeline.py`** - Object-oriented data extraction framework demonstrating inheritance, super(), method overriding, and polymorphism.
