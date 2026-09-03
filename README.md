@@ -13,3 +13,4 @@ Assignments, exercises, and mini-projects from the DEPI scholarship.
 - **`07_substitution_cipher.py`** - Text encryption and decryption using a shuffled character list.
 - **`08_input_validator.py`** - Custom exception class and try/except validation loop for username inputs.
 - **`09_oop_data_extractors.py`** - Object-oriented data extraction hierarchy using inheritance, super(), and polymorphism.
+- **`10_decorator_timer.py`** - Reusable pipeline performance decorator to measure execution time.
