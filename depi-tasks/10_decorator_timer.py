@@ -16,7 +16,7 @@ def log_execution_time(func):
         start = time.time()
         result = func(*args, **kwargs)
         elapsed = time.time() - start
-        print(f"⏱️ Task '{func.__name__}' finished in {elapsed:.2f} seconds.")
+        print(f"[TIMER] Task '{func.__name__}' finished in {elapsed:.2f} seconds.")
         return result
     return wrapper
 
