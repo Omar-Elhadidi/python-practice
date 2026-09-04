@@ -15,4 +15,4 @@ A collection of Python exercises, CLI tools, and mini-projects exploring core pr
 - **`09_oop_data_extractors.py`** - Object-oriented data extraction hierarchy using inheritance, super(), and polymorphism.
 - **`10_decorator_timer.py`** - Reusable pipeline performance decorator to measure execution time.
 - **`11_file_pipeline_io.py`** - File detection, CSV dictionary export, and streaming file ingestion with average calculations.
-- **`12_date_countdown_calculator.py`** - Interactive countdown timer and date difference calculator using datetime and strptime.
+- **`12_event_countdown.py`** - Date formatting, string parsing with strptime, and days countdown calculator.
