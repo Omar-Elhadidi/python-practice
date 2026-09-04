@@ -1,16 +1,17 @@
 """
-Task: File I/O & Path Detection Pipeline
+Task: Local File Pipeline - File Detection, CSV Export & Ingestion
 
-Build a local staging pipeline combining file detection, writing, and reading:
-1. Export: Use csv.DictWriter to write raw job dictionaries to a CSV file with headers.
-2. Verify: Check file existence and type using os.path.exists() and os.path.isfile().
-3. Ingest: Read rows using csv.reader, skip header with next(), and calculate the average salary.
+Demonstrate File I/O operations (Bro Code #68, #69, #70):
+1. Detect and verify file existence using os.path.exists() and os.path.isfile().
+2. Export structured dictionaries to a CSV file using csv.DictWriter with headers.
+3. Read CSV data using csv.reader, skip headers with next(), and calculate salary metrics.
 """
 
 import csv
+import json
 import os
 
-path = "staged_jobs.csv"
+path = "C:/Users/user/Desktop/hadidi.csv"
 
 raw_jobs = [
     {"company": "Amazon", "role": "Data Engineer", "salary": 140000},
@@ -27,15 +28,15 @@ def export_to_csv(file_path, data):
         writer = csv.DictWriter(file, fieldnames=headers)
         writer.writeheader()
         writer.writerows(data)
-        print(f"[EXPORT] CSV file created at '{file_path}'")
+        print(f"CSV file created at {file_path}")
 
 
 def verify_file(file_path):
     if os.path.exists(file_path) and os.path.isfile(file_path):
-        print(f"[INFO] File '{file_path}' exists and is ready for ingestion.")
+        print(f"File '{file_path}' exists and is ready for ingestion.")
         return True
     else:
-        print(f"[ERROR] File '{file_path}' does not exist!")
+        print(f"File '{file_path}' does not exist!")
         return False
 
 
@@ -48,12 +49,13 @@ def read_and_calculate_average(file_path):
         header = next(rows)
 
         for row in rows:
+            print(f"Salary found: ${float(row[2]):,.0f}")
             total_salary += float(row[2])
             count += 1
 
-    avg_salary = total_salary / count if count > 0 else 0
-    print(f"[METRIC] Total Jobs Read: {count}")
-    print(f"[METRIC] Average Salary: ${avg_salary:,.2f} USD")
+        avg_salary = total_salary / count
+
+    print(f"Average Salaries: ${avg_salary:,.2f}")
 
 
 if __name__ == "__main__":

@@ -14,4 +14,4 @@ Assignments, exercises, and mini-projects from the DEPI scholarship.
 - **`08_input_validator.py`** - Custom exception class and try/except validation loop for username inputs.
 - **`09_oop_data_extractors.py`** - Object-oriented data extraction hierarchy using inheritance, super(), and polymorphism.
 - **`10_decorator_timer.py`** - Reusable pipeline performance decorator to measure execution time.
-- **`11_file_pipeline_io.py`** - Local data staging pipeline demonstrating file detection, CSV export, and line-by-line reading with aggregation.
+- **`11_file_pipeline_io.py`** - File detection, CSV dictionary export, and streaming file ingestion with average calculations.
