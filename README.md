@@ -1,8 +1,8 @@
 # Python Practice 🐍
 
-Assignments, exercises, and mini-projects from the DEPI scholarship.
+A collection of Python exercises, CLI tools, and mini-projects exploring core programming, OOP, and data engineering fundamentals.
 
-## 📂 Tasks & Projects
+## 📂 Mini-Projects
 
 - **`01_string_operations.py`** - String indexing, slicing, counting vowels, and f-strings.
 - **`02_text_cleaner.py`** - Cleaning up messy text, removing extra spaces, and replacing shorthand words.
